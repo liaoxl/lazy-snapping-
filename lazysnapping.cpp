@@ -2,8 +2,8 @@
  * home page: lzhj.me
  * 2012-02-06
  */
-#include <cv.h>
-#include <highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
 #include "maxflow-v3.01/graph.h"
 #include <vector>
 #include <iostream>
@@ -15,8 +15,10 @@ class LasySnapping{
     
 public :
     LasySnapping():graph(NULL){
-        avgForeColor ={0,0,0};
-        avgBackColor ={0,0,0};
+        // avgForeColor ={0,0,0};
+        // avgBackColor ={0,0,0};
+		avgForeColor[0]=0,avgForeColor[1]=0,avgForeColor[2]=0;
+		avgBackColor[0]=0,avgBackColor[1]=0,avgBackColor[2]=0;
     }
     ~LasySnapping(){ 
         if(graph){
