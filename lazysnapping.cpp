@@ -55,7 +55,7 @@ public :
                 + forePts[i].y*image->widthStep;
             sum[0] += p[0];
             sum[1] += p[1];
-            sum[2] += p[2];            
+            sum[2] += p[2];
         }
         cout<<sum[0]<<" " <<forePts.size()<<endl;
         avgForeColor[0] = sum[0]/forePts.size();
@@ -95,8 +95,8 @@ private :
     bool isPtInVector(CvPoint pt, vector<CvPoint> points);
     void getE1(unsigned char* color,float* energy);
     float getE2(unsigned char* color1,unsigned char* color2);
-    
-    GraphType *graph;    
+
+    GraphType *graph;
 };
 
 float LasySnapping::colorDistance(unsigned char* color1, unsigned char* color2)
